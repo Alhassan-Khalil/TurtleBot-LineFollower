@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#note this node was Written using opencv 3.3.1 dev
+#there might be version issues if a highter version was used
 #dependencies
 import roslib
 import sys
@@ -33,6 +35,7 @@ def callback(Image):
     #dim = (w/2,h/2)
     #cv_image = cv2.resize(cv_image, dim)
     mask = color_mask(cv_image)
+    #if there there is an error here try to define it as contours,hierarchy only
     hierarchy,contours,_ = cv2.findContours(mask.copy(), 1, cv2.CHAIN_APPROX_NONE)
     left_offset = min(range(w/2-gain,w/2))
     right_offset = max(range(w/2,w/2+gain))
