@@ -17,10 +17,8 @@ gain = 20
 def color_mask(frame):
     hsv = cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
     blur = cv2.GaussianBlur(hsv,(5,5),0)
-    #lower = np.array([20, 100, 100])
-    #upper = np.array([30, 255, 255])
-    lower = np.array([0, 0, 0])
-    upper = np.array([24, 0, 0])
+    lower = np.array([85, 225, 0])
+    upper = np.array([179, 255, 255])
     mask = cv2.inRange(blur, lower, upper)
     return mask
 
@@ -62,12 +60,12 @@ def callback(Image):
     #publishing the steering
     pub = rospy.Publisher('vision_node',Int32, queue_size=10)
     msg_sterring = (steering)
-    rospy.loginfo(msg_sterring)
+    #rospy.loginfo(msg_sterring)
     pub.publish(msg_sterring)
 
     #show the frame
     cv2.imshow("Camera View", image_view)
-    cv2.imshow("processing Image",cv_image)
+    #cv2.imshow("processing Image",cv_image)
     cv2.waitKey(1)
 
 
