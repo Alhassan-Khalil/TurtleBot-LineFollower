@@ -1,0 +1,22 @@
+Running Gazebo with a TurtleBot
+
+	roslaunch turtlebot_gazebo turtlebot_world.launch
+
+
+Running tutrtlebot with our map 
+
+	roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=/home/default/TurtleBot-LineFollower/Gazebo_map/test_map5.world
+	
+
+Running Rviz with a TurtleBot
+
+	roslaunch turtlebot_rviz_launchers view_robot.launch
+
+using keyborde to move 
+
+	roslaunch turtlebot_teleop keyboard_teleop.launch 
+
+
+Interactive Markers
+
+	roslaunch turtlebot_interactive_markers interactive_markers.launch
