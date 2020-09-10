@@ -12,7 +12,7 @@ Running Rviz with a TurtleBot
 
 	roslaunch turtlebot_rviz_launchers view_robot.launch
 
-using keyborde to move 
+using keyboard to move 
 
 	roslaunch turtlebot_teleop keyboard_teleop.launch 
 
