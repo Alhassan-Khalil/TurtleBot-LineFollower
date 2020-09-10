@@ -18,7 +18,9 @@ This project consist of 3 main aspects which can be defined as followS
 ### 1) robot modeling
 TurtleBot is a low-cost, personal robot kit with open-source software. With TurtleBot, we’ll be
 able to build a robot that can drive around any environment. Figure 1
+
 ![image](https://user-images.githubusercontent.com/45981942/92712727-be1ae680-f362-11ea-86cd-cbeba63bd5f6.png)
+
 The main sensor of the TutelBot is the 3D camera. The 3D camera is one of the most versatile
 robot sensors. One output of a 3D camera is a 2D camera image, which means that various object
 recognition algorithms can be used. Many machine vision libraries are available for ROS. One of the
@@ -41,7 +43,8 @@ In this world we also add some light to create shadows to try it on the 3D camer
 done on the colors
 
 ![image](https://user-images.githubusercontent.com/45981942/92712976-12be6180-f363-11ea-8cfe-52dea63a215d.png)
-                               *Gazebo map*
+
+*Gazebo map*
 
 ### 3) Robot programing
 
