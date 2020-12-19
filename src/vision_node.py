@@ -33,7 +33,10 @@ def callback(Image):
     cv_image = cv_image[360:480, 160:480]
     h,w,_ = cv_image.shape
     mask = color_mask(cv_image)
-    contours,hierarchy = cv2.findContours(mask.copy(), 1, cv2.CHAIN_APPROX_NONE)
+    try:
+        contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    except:
+        ret_img, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     left_offset = min(range(w/2-gain,w/2))
     right_offset = max(range(w/2,w/2+gain))
 
