@@ -33,6 +33,7 @@ def callback(Image):
     cv_image = cv_image[360:480, 160:480]
     h,w,_ = cv_image.shape
     mask = color_mask(cv_image)
+    #fining countours compatible with all opencv versions until 4.0
     try:
         contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     except:
